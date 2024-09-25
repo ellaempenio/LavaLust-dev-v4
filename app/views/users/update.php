@@ -45,7 +45,7 @@
                     <td></td>
                     <td>
                         <button type="submit" class="btn btn-primary">Update</button>
-                        <a href='index.php' class='btn btn-danger'>Back to read records</a>
+                        <a href='<?= site_url('user/read'); ?>' class='btn btn-danger'>Back to read records</a>
                     </td>
                 </tr>
             </table>
