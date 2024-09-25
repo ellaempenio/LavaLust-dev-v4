@@ -11,7 +11,7 @@ class user_model extends Model
     public function create($lastname, $firstname, $email, $gender, $address)
     {
         $data = array(
-            'eve_name' => $lastname,
+            'eve_last_name' => $lastname,
             'eve_first_name' => $firstname,
             'eve_email' => $email,
             'eve_gender' => $gender,

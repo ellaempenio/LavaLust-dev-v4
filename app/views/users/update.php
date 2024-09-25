@@ -13,7 +13,7 @@
         <div class="page-header">
             <h1>Update User</h1>
         </div>
-        <form action="<?= site_url('LavaLust-dev-v4/user/update/' . segment(4)); ?>" method="post">
+        <form action="<?= site_url('/user/update/' . segment(4)); ?>" method="post">
             <table class='table table-hover table-responsive table-bordered'>
                 <tr>
                     <td>Last Name</td>

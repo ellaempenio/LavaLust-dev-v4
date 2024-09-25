@@ -15,7 +15,7 @@
 
     <div class="container my-5">
         <h2 class="text-center">User Information</h2>
-        <a class="btn btn-primary mb-4" role="button" href="<?= site_url('LavaLust-dev-v4/user/create'); ?>">Create User</a>
+        <a class="btn btn-primary mb-4" role="button" href="<?= site_url('/user/create'); ?>">Create User</a>
 
         <table id="userTable" class="table table-bordered table-striped table-hover">
             <thead class="thead-dark">
@@ -39,8 +39,8 @@
                         <td><?= $u['eve_gender'] ?></td>
                         <td><?= $u['eve_address'] ?></td>
                         <td>
-                            <a href="<?= site_url('LavaLust-dev-v4/user/update/' . $u['id']); ?>">Update</a>
-                            <a href="<?= site_url('LavaLust-dev-v4/user/delete/' . $u['id']); ?>">Delete</a>
+                            <a href="<?= site_url('/user/update/' . $u['id']); ?>">Update</a>
+                            <a href="<?= site_url('/user/delete/' . $u['id']); ?>">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
