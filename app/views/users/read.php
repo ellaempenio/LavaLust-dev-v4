@@ -13,39 +13,48 @@
 
 <body>
 
-    <div class="container my-5">
-        <h2 class="text-center">User Information</h2>
-        <a class="btn btn-primary mb-4" role="button" href="<?= site_url('/user/create'); ?>">Create User</a>
-
-        <table id="userTable" class="table table-bordered table-striped table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($user as $u): ?>
-                    <tr>
-                        <td><?= $u['id'] ?></td>
-                        <td><?= $u['eve_last_name'] ?></td>
-                        <td><?= $u['eve_first_name'] ?></td>
-                        <td><?= $u['eve_email'] ?></td>
-                        <td><?= $u['eve_gender'] ?></td>
-                        <td><?= $u['eve_address'] ?></td>
-                        <td>
-                            <a href="<?= site_url('/user/update/' . $u['id']); ?>">Update</a>
-                            <a href="<?= site_url('/user/delete/' . $u['id']); ?>">Delete</a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+<div class="container my-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h2 class="card-title mb-0 text-center">User Information</h2>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between mb-4">
+                    <a class="btn btn-success" role="button" href="<?= site_url('/user/create'); ?>">Create User</a>
+                </div>
+                <div class="table-responsive">
+                    <table id="userTable" class="table table-bordered table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($user as $u): ?>
+                                <tr>
+                                    <td><?= $u['id'] ?></td>
+                                    <td><?= $u['eve_last_name'] ?></td>
+                                    <td><?= $u['eve_first_name'] ?></td>
+                                    <td><?= $u['eve_email'] ?></td>
+                                    <td><?= $u['eve_gender'] ?></td>
+                                    <td><?= $u['eve_address'] ?></td>
+                                    <td>
+                                        <a href="<?= site_url('/user/update/' . $u['id']); ?>" class="btn btn-warning btn-sm">Update</a>
+                                        <a href="<?= site_url('/user/delete/' . $u['id']); ?>" class="btn btn-danger btn-sm">Delete</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
